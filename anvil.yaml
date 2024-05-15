@@ -1,0 +1,158 @@
+correct_dependency_ids: {}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+- source: /runtime/services/google.yml
+  client_config:
+    app_files:
+    - capabilities: {canEdit: true, canCopy: true}
+      editable: true
+      copyable: true
+      embedLink: https://docs.google.com/spreadsheets/d/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/htmlembed?ouid=115147530008291864448
+      copyRequiresWriterPermission: false
+      python_name: lbdata24
+      explicitlyTrashed: false
+      lastModifyingUser:
+        displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      shared: false
+      createdDate: '2024-04-27T14:21:28.632Z'
+      id: 1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4
+      owners:
+      - displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/parents/0ANo2mBKLzWxOUk9PVA',
+        id: 0ANo2mBKLzWxOUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0ANo2mBKLzWxOUk9PVA'}
+      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
+      selfLink: https://www.googleapis.com/drive/v2/files/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4
+      lastViewedByMeDate: '2024-05-08T12:06:14.886Z'
+      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/permissions/me',
+        etag: '"5f6_utyf4zb4__GBfaj79Wit7wM"', pendingOwner: false}
+      lastModifyingUserName: Todd Sales
+      etag: '"MTcxNTA4Njk4MTM2OA"'
+      kind: drive#file
+      modifiedByMeDate: '2024-05-07T13:03:01.368Z'
+      title: LBdata24
+      version: '60'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '728420'
+      alternateLink: https://docs.google.com/spreadsheets/d/1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4/edit?usp=drivesdk
+      mimeType: application/vnd.google-apps.spreadsheet
+      modifiedDate: '2024-05-07T13:03:01.368Z'
+      quotaBytesUsed: '728420'
+      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=ods',
+        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=tsv',
+        pdf: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=pdf',
+        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=xlsx',
+        csv: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=csv',
+        zip: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=zip',
+        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1r-OedI73Y7Fkw1D7IP2A9fXLT9mi4j7-lQkAOPaI--4&exportFormat=ods'}
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBMDtaSqwSoQ0wg-mMrVRF4jsuNYjTrCjvyQJWAFqwyT32vqLyyNFTALaEyxRcTngU4V6zPuIdFoFHV0nX1LSu5tskIuyHUPmWW9x_i2NZzQdD3GPLdGuGXqt2rRXA=s220
+      ownerNames: [Todd Sales]
+    - capabilities: {canEdit: true, canCopy: true}
+      editable: true
+      copyable: true
+      embedLink: https://docs.google.com/spreadsheets/d/1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q/htmlembed?ouid=115147530008291864448
+      copyRequiresWriterPermission: false
+      python_name: dd_pricing
+      explicitlyTrashed: false
+      lastModifyingUser:
+        displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      shared: false
+      createdDate: '2024-05-14T17:05:08.659Z'
+      id: 1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q
+      owners:
+      - displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q/parents/0ANo2mBKLzWxOUk9PVA',
+        id: 0ANo2mBKLzWxOUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0ANo2mBKLzWxOUk9PVA'}
+      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
+      selfLink: https://www.googleapis.com/drive/v2/files/1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q
+      lastViewedByMeDate: '2024-05-14T17:05:12.169Z'
+      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q/permissions/me',
+        etag: '"CCaBn1DDQZgPdd-xGQ0G_ytvM1Y"', pendingOwner: false}
+      lastModifyingUserName: Todd Sales
+      etag: '"MTcxNTcwNjMwODY2MA"'
+      kind: drive#file
+      modifiedByMeDate: '2024-05-14T17:05:08.660Z'
+      title: DD Pricing
+      version: '6'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '41130'
+      alternateLink: https://docs.google.com/spreadsheets/d/1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q/edit?usp=drivesdk
+      mimeType: application/vnd.google-apps.spreadsheet
+      modifiedDate: '2024-05-14T17:05:08.660Z'
+      quotaBytesUsed: '41130'
+      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=ods',
+        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=tsv',
+        pdf: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=pdf',
+        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=xlsx',
+        csv: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=csv',
+        zip: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=zip',
+        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=ods'}
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBM2L3QdS6TaDNpS_J4dDEaboyG8rrEdxZ8idnJNamjSO0ematHOiD-oWCS3jN72fxuIEwWIs1yh7JBBoJRAi2TmVS_tyKelaSt6lG9K_qav2qSv14Q7W-JEpMoozQ=s220
+      ownerNames: [Todd Sales]
+  server_config: {}
+package_name: M3_App_3
+allow_embedding: true
+name: Clone of D&D Quote Creator
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {title: D&D Quote Creator, description: Creates quotes from the excel list of D & D products and their pricing.,
+  logo_img: 'asset:android-chrome-192x192.png'}
+startup_form: Form1
+db_schema:
+  users:
+    client: none
+    server: full
+    columns:
+    - name: email
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: enabled
+      admin_ui: {order: 1, width: 200}
+      type: bool
+    - name: last_login
+      admin_ui: {order: 2, width: 200}
+      type: datetime
+    - name: password_hash
+      admin_ui: {order: 3, width: 200}
+      type: string
+    - name: n_password_failures
+      admin_ui: {order: 4, width: 200}
+      type: number
+    - name: confirmed_email
+      admin_ui: {order: 5, width: 200}
+      type: bool
+    title: Users
+uplink_visible: true
+renamed: true

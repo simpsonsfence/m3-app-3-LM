@@ -1,0 +1,28 @@
+is_package: true
+container: {type: DataRowPanel}
+components:
+- name: text_box_1
+  properties: {border: none, background: 'theme:Background', spacing_above: none,
+    spacing_below: none, role: smaller-text}
+  type: TextBox
+  layout_properties: {column: JKSDUP}
+- name: text_box_1_copy
+  properties: {border: none, background: 'theme:Background', spacing_above: none,
+    spacing_below: none, role: smaller-text}
+  type: TextBox
+  layout_properties: {column: VJQQOR}
+- name: text_box_1_copy_2
+  properties: {border: none, background: 'theme:Background', spacing_above: none,
+    spacing_below: none, role: smaller-text}
+  type: TextBox
+  layout_properties: {column: OJLQEN}
+- name: text_box_1_copy_3
+  properties: {border: none, background: 'theme:Background', spacing_above: none,
+    spacing_below: none, role: smaller-text}
+  type: TextBox
+  layout_properties: {column: LFHXAA}
+- name: text_box_1_copy_4
+  properties: {border: none, background: 'theme:Background', spacing_above: none,
+    spacing_below: none, role: smaller-text}
+  type: TextBox
+  layout_properties: {column: DBWHLU}
