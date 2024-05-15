@@ -124,10 +124,10 @@ services:
   server_config: {}
 package_name: M3_App_3
 allow_embedding: true
-name: Clone of D&D Quote Creator
+name: Liftmaster Quote Creator
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-metadata: {title: D&D Quote Creator, description: Creates quotes from the excel list of D & D products and their pricing.,
+metadata: {title: Liftmaster Quote Creator, description: Creates quotes from the excel list of liftmaster products and their pricing.,
   logo_img: 'asset:android-chrome-192x192.png'}
 startup_form: Form1
 db_schema:

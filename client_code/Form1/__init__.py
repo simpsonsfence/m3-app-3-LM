@@ -77,7 +77,7 @@ class Form1(Form1Template):
     self.markup = part_selected['MARK-UP']
     self.item_amount.text = 1
     self.unit_price = part_selected['SELLING PRICE']
-    self.markup_percentage.text = 65
+    self.markup_percentage.text = 60
 
     """Set the amounts into the displayed text to veiw"""
     self.item_description_text.text = self.item_description
