@@ -121,7 +121,64 @@ services:
         vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1Tc0BP3SPJSFd_e9ci_isqGh44TZJTWB1yueesFbyj5Q&exportFormat=ods'}
       thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBM2L3QdS6TaDNpS_J4dDEaboyG8rrEdxZ8idnJNamjSO0ematHOiD-oWCS3jN72fxuIEwWIs1yh7JBBoJRAi2TmVS_tyKelaSt6lG9K_qav2qSv14Q7W-JEpMoozQ=s220
       ownerNames: [Todd Sales]
-  server_config: {}
+    - capabilities: {canEdit: true, canCopy: true}
+      editable: true
+      copyable: true
+      embedLink: https://docs.google.com/spreadsheets/d/1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c/htmlembed?ouid=115147530008291864448
+      copyRequiresWriterPermission: false
+      python_name: liftmaster_all_items
+      explicitlyTrashed: false
+      lastModifyingUser:
+        displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      shared: false
+      createdDate: '2024-05-15T17:05:46.070Z'
+      id: 1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c
+      owners:
+      - displayName: Todd Sales
+        kind: drive#user
+        isAuthenticatedUser: true
+        permissionId: '17865141105862477839'
+        emailAddress: simpsonsfencech@gmail.com
+        picture: {url: 'https://lh3.googleusercontent.com/a/ACg8ocILpQWfeO6vyxdZWxAMKLdH30UA2sHrX8XkcfvmSkUs4geObQ=s64'}
+      markedViewedByMeDate: '1970-01-01T00:00:00.000Z'
+      spaces: [drive]
+      parents:
+      - {selfLink: 'https://www.googleapis.com/drive/v2/files/1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c/parents/0ANo2mBKLzWxOUk9PVA',
+        id: 0ANo2mBKLzWxOUk9PVA, isRoot: true, kind: drive#parentReference, parentLink: 'https://www.googleapis.com/drive/v2/files/0ANo2mBKLzWxOUk9PVA'}
+      labels: {viewed: true, restricted: false, starred: false, hidden: false, trashed: false}
+      iconLink: https://drive-thirdparty.googleusercontent.com/16/type/application/vnd.google-apps.spreadsheet
+      selfLink: https://www.googleapis.com/drive/v2/files/1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c
+      lastViewedByMeDate: '2024-05-15T17:06:03.136Z'
+      userPermission: {id: me, type: user, role: owner, kind: drive#permission, selfLink: 'https://www.googleapis.com/drive/v2/files/1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c/permissions/me',
+        etag: '"qdTWxhlY-ZalxtqrzE8OdT6cBcY"', pendingOwner: false}
+      lastModifyingUserName: Todd Sales
+      etag: '"MTcxNTc5Mjc0NjA3MQ"'
+      kind: drive#file
+      modifiedByMeDate: '2024-05-15T17:05:46.071Z'
+      title: Liftmaster All Items
+      version: '7'
+      appDataContents: false
+      writersCanShare: true
+      fileSize: '18116'
+      alternateLink: https://docs.google.com/spreadsheets/d/1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c/edit?usp=drivesdk
+      mimeType: application/vnd.google-apps.spreadsheet
+      modifiedDate: '2024-05-15T17:05:46.071Z'
+      quotaBytesUsed: '18116'
+      exportLinks: {x-vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=ods',
+        tab-separated-values: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=tsv',
+        pdf: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=pdf',
+        vnd.openxmlformats-officedocument.spreadsheetml.sheet: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=xlsx',
+        csv: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=csv',
+        zip: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=zip',
+        vnd.oasis.opendocument.spreadsheet: 'https://docs.google.com/spreadsheets/export?id=1XOluUgHbamGQeBtJLTNSCpmMMwHPsLm9tXhQGpbxd5c&exportFormat=ods'}
+      thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBOnDRCn7cD-noudQC2BXFJdT_k3M_LO_bpy7k1MPDyO1V9vOaLfW_36j3uN9yUgkAXEMMXvLp0y4yF9FMVbY3LhrFrK8GWT6Ie75Z3H6f5CQxbSjYa1NkDV4ja5UQ=s220
+      ownerNames: [Todd Sales]
+  server_config: {enc_delegation_refresh_token: +/zHGHFhRC0lUrVgT31N5j8J8BiTFkRRKvzvqYJ2vkYGQxeWT2V1Gr/QdCcmu0TpJKiu/OBqEVw1Ct7Nw6SAFToMA5rqZ2Wu6wFhFTT5JirFbYkEeE3leJNXpx4L138DwMZo9r0E//diuwytguh8MzQekyjpAqIl4WxeNiqtSK6M9eaMLMI3HsXjk5rJwwNSgAOQGiiuYPst/ZFRabspivVmeA2tjhCTOdEM7VqN8+5YkfV8p+c1ehQsyclzIV7nc01PzFPknT5hXRvCFRKjNYT5inYzKSrs/TnlhZyfBzC+ZiisHG286EjcOwgNKw==}
 package_name: M3_App_3
 allow_embedding: true
 name: Liftmaster Quote Creator

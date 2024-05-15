@@ -71,10 +71,10 @@ components:
       layout_properties: {grid_position: 'OKYQIN,AFPPEX'}
       event_bindings: {}
       data_bindings: []
-    - name: column_panel_1
+    - name: column_panel_2
       properties: {}
       type: ColumnPanel
-      layout_properties: {grid_position: 'PHUZPT,EHWWIB'}
+      layout_properties: {grid_position: 'PHUZPT,JWTLWA'}
       components:
       - type: Label
         properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
@@ -82,63 +82,166 @@ components:
           icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
           underline: false, icon: ''}
         name: label_2
-        layout_properties: {grid_position: 'YJBVCO,TMIXPI ELBCSE,QJBNXR'}
-      - type: Label
-        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-          visible: true, text: Exchange, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_6
-        layout_properties: {grid_position: 'YJBVCO,TMIXPI RPOEOI,CWOEPN'}
-      - type: Label
-        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-          visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_9
-        layout_properties: {grid_position: 'YJBVCO,TMIXPI GPITQF,YHCKGZ'}
-      - type: Label
-        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-          visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        name: label_11
-        layout_properties: {grid_position: 'YJBVCO,TMIXPI RFPYJF,WRZQNC'}
+        layout_properties: {grid_position: 'ICHCDR,HJXXSF'}
       - type: Label
         properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
           visible: true, text: '', font_size: null, font: '', spacing_above: small,
           icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
           underline: false, icon: ''}
         name: list_price_box
-        layout_properties: {grid_position: 'YJBVCO,SALJWU VPKCGG,CVLRJM'}
+        layout_properties: {grid_position: 'ICHCDR,JFKJIV'}
         data_bindings: []
       - type: Label
-        properties: {}
-        name: exchange_box
-        layout_properties: {grid_position: 'YJBVCO,SALJWU MRQPBT,DEFSNQ'}
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Total Cost, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_9
+        layout_properties: {grid_position: 'LXBVMX,VYILMV'}
       - type: Label
         properties: {}
         name: total_cost_box
-        layout_properties: {grid_position: 'YJBVCO,SALJWU XUNZLP,DHGKLF'}
+        layout_properties: {grid_position: 'LXBVMX,YVVRIL'}
+      - name: column_panel_17
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'VSZJPZ,QPNLCT'}
+        components:
+        - name: column_panel_3
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"OSVMEV":32,"TIMOIY":8,"OYZUHE":20}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'XFGJJL,SHPSMM'}
+          components:
+          - name: spacer_4
+            properties: {height: 32, spacing_above: none, spacing_below: none}
+            type: Spacer
+            layout_properties: {grid_position: 'HHWPVS,OSVMEV'}
+          - type: CheckBox
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            name: markup_check
+            layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
+            event_bindings: {change: markup_check_change}
+          - type: Label
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: label_7
+            layout_properties: {grid_position: 'HHWPVS,OYZUHE'}
+        - name: column_panel_6
+          properties: {col_widths: '{"QWJNNF":35,"JKBXQS":34,"GRWJOW":8}', spacing_above: none,
+            spacing_below: none, col_spacing: medium}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'XFGJJL,JWHEXG'}
+          components:
+          - type: Label
+            properties: {}
+            name: markup_box
+            layout_properties: {grid_position: 'GVEGHU,QWJNNF'}
+          - name: markup_percentage
+            properties: {role: outlined, spacing_above: none, spacing_below: none}
+            type: TextBox
+            layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
+            event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
+              lost_focus: markup_percentage_lost_focus}
+      - type: Label
+        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+          visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_11
+        layout_properties: {grid_position: 'MUYGSR,WASTRG'}
       - type: Label
         properties: {}
         name: unit_price_box
-        layout_properties: {grid_position: 'YJBVCO,SALJWU YXJNFR,BLCBLN'}
-    - name: column_panel_2
+        layout_properties: {grid_position: 'MUYGSR,ERYDNE'}
+      - name: column_panel_18
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'DRMSOF,BBGHLU'}
+        components:
+        - name: column_panel_5
+          properties: {col_widths: '{}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'QEMNZJ,IAEXFM'}
+          components:
+          - name: label_2_copy
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            type: Label
+            layout_properties: {grid_position: 'WRTLTB,HYFZWN'}
+          - name: item_amount
+            properties: {role: outlined, spacing_above: none, spacing_below: none}
+            type: TextBox
+            layout_properties: {grid_position: 'WRTLTB,JPQWWQ'}
+            event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
+              change: item_amount_change}
+        - name: label_12
+          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+            visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
+            icon_align: left, spacing_below: small, italic: false, background: '',
+            bold: true, underline: false, icon: ''}
+          type: Label
+          layout_properties: {grid_position: 'LCRBCE,XCETCN'}
+        - name: extended_price_box
+          properties: {}
+          type: Label
+          layout_properties: {grid_position: 'LCRBCE,DGUSVJ'}
+    - name: column_panel_1
       properties: {}
       type: ColumnPanel
-      layout_properties: {grid_position: 'PHUZPT,JWTLWA'}
+      layout_properties: {grid_position: 'PHUZPT,QXEEGU'}
       components:
-      - name: column_panel_8
-        properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+      - name: column_panel_16_copy_3
+        properties: {}
         type: ColumnPanel
-        layout_properties: {grid_position: 'FCQVEJ,AQHVOD KSVRBH,NKTFGW'}
+        layout_properties: {grid_position: 'MBLMKI,PKZHEW'}
+        components:
+        - name: column_panel_8_copy_3
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'FKHFGW,XKKYZB'}
+          components:
+          - name: spacer_3_copy_3
+            properties: {height: 32, spacing_below: none, spacing_above: none}
+            type: Spacer
+            layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
+          - name: misc_check
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            type: CheckBox
+            layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
+            event_bindings: {change: misc_check_change}
+          - name: label_5_copy_3
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Misc., font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            type: Label
+            layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
+        - name: misc_amount
+          properties: {role: outlined, spacing_above: none, spacing_below: none}
+          type: TextBox
+          layout_properties: {grid_position: 'FKHFGW,XRZFPS'}
+          event_bindings: {pressed_enter: misc_amount_pressed_enter, change: misc_amount_change,
+            lost_focus: misc_amount_lost_focus}
+      - name: column_panel_19
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'KDGJLX,AASWUT'}
         components:
         - name: column_panel_7
           properties: {col_widths: '{"VKDCKU":32,"CMGTSI":8,"FSKEQJ":20}', spacing_above: none,
             spacing_below: none}
           type: ColumnPanel
-          layout_properties: {grid_position: 'RMWBEP,ZLHZQS'}
+          layout_properties: {grid_position: 'CFKUGJ,PWOZPN'}
           components:
           - name: spacer_2
             properties: {height: 32, spacing_above: none, spacing_below: none}
@@ -159,102 +262,117 @@ components:
               bold: true, underline: false, icon: ''}
             name: label_3
             layout_properties: {grid_position: 'BZKDQC,FSKEQJ'}
-        - name: spacer_3
-          properties: {height: 32, spacing_below: none, spacing_above: none}
-          type: Spacer
-          layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
-            font: '', spacing_above: none, spacing_below: none, italic: false, background: '',
-            bold: false, checked: true, underline: false}
-          name: fin_cost_check
-          layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-          event_bindings: {change: fin_cost_check_change}
-        - type: Label
-          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-            visible: true, text: Finance Cost, font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
-          name: label_5
-          layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
-      - name: column_panel_3
-        properties: {spacing_above: none, spacing_below: none, col_widths: '{"OSVMEV":32,"TIMOIY":8,"OYZUHE":20}'}
-        type: ColumnPanel
-        layout_properties: {grid_position: 'FCQVEJ,AQHVOD JPLWDX,BCXKYE'}
-        components:
-        - name: spacer_4
-          properties: {height: 32, spacing_above: none, spacing_below: none}
-          type: Spacer
-          layout_properties: {grid_position: 'HHWPVS,OSVMEV'}
-        - type: CheckBox
-          properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
-            foreground: '', allow_indeterminate: false, visible: true, text: '', font_size: null,
-            font: '', spacing_above: none, spacing_below: none, italic: false, background: '',
-            bold: false, checked: true, underline: false}
-          name: markup_check
-          layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
-          event_bindings: {change: markup_check_change}
-        - type: Label
-          properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-            visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
-            icon_align: left, spacing_below: small, italic: false, background: '',
-            bold: true, underline: false, icon: ''}
-          name: label_7
-          layout_properties: {grid_position: 'HHWPVS,OYZUHE'}
-      - name: label_2_copy
-        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-          visible: true, text: Amount, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'FCQVEJ,AQHVOD CSBDTA,ADJCMH'}
-      - type: Label
-        properties: {}
-        name: freight_box
-        layout_properties: {grid_position: 'FCQVEJ,OAEBPE WZADVT,BVDXEK'}
-      - type: Label
-        properties: {}
-        name: fin_cost_box
-        layout_properties: {grid_position: 'FCQVEJ,OAEBPE QVJKGZ,NKLOOS'}
-      - name: column_panel_6
-        properties: {col_widths: '{"QWJNNF":35,"JKBXQS":34,"GRWJOW":8}', spacing_above: none,
-          spacing_below: none, col_spacing: medium}
-        type: ColumnPanel
-        layout_properties: {grid_position: 'FCQVEJ,OAEBPE CMCEAL,TVEWEC'}
-        components:
-        - type: Label
-          properties: {}
-          name: markup_box
-          layout_properties: {grid_position: 'GVEGHU,QWJNNF'}
-        - name: markup_percentage
+        - name: freight_amount
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
-          layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
-          event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
-            lost_focus: markup_percentage_lost_focus}
-      - name: item_amount
-        properties: {role: outlined, spacing_above: none, spacing_below: none}
-        type: TextBox
-        layout_properties: {grid_position: 'FCQVEJ,OAEBPE SZOMCF,PMOWJZ'}
-        event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
-          change: item_amount_change}
-    - name: column_panel_5
-      properties: {col_widths: '{"WTFIBR":15,"VPAJGD":45}'}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'XEYZOA,GJGJDC'}
-      components:
-      - name: label_12
-        properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
-          visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
-          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
-          underline: false, icon: ''}
-        type: Label
-        layout_properties: {grid_position: 'ZYNZAC,WTFIBR'}
-      - name: extended_price_box
+          layout_properties: {grid_position: 'CFKUGJ,DLUXMN'}
+          event_bindings: {pressed_enter: freight_amount_pressed_enter, change: freight_amount_change,
+            lost_focus: freight_amount_lost_focus}
+      - name: column_panel_16
         properties: {}
-        type: Label
-        layout_properties: {grid_position: 'ZYNZAC,VPAJGD'}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'OMRRMY,WYLMVM'}
+        components:
+        - name: column_panel_8
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
+          components:
+          - name: spacer_3
+            properties: {height: 32, spacing_below: none, spacing_above: none}
+            type: Spacer
+            layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
+          - type: CheckBox
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            name: weld_charge_check
+            layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
+            event_bindings: {change: weld_charge_check_change}
+          - type: Label
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Weld Charge, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            name: label_5
+            layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
+        - name: weld_charge_amount
+          properties: {role: outlined, spacing_above: none, spacing_below: none}
+          type: TextBox
+          layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
+          event_bindings: {pressed_enter: weld_charge_amount_pressed_enter, change: weld_charge_amount_change,
+            lost_focus: weld_charge_amount_lost_focus}
+      - name: column_panel_16_copy
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'GEXNXT,CRPHFT'}
+        components:
+        - name: column_panel_8_copy
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
+          components:
+          - name: spacer_3_copy
+            properties: {height: 32, spacing_below: none, spacing_above: none}
+            type: Spacer
+            layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
+          - name: prep_cost_check
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            type: CheckBox
+            layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
+            event_bindings: {change: prep_cost_check_change}
+          - name: label_5_copy
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: Prep Cost, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            type: Label
+            layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
+        - name: prep_cost_amount
+          properties: {role: outlined, spacing_above: none, spacing_below: none}
+          type: TextBox
+          layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
+          event_bindings: {pressed_enter: prep_cost_amount_pressed_enter, change: prep_cost_amount_change,
+            lost_focus: prep_cost_amount_lost_focus}
+      - name: column_panel_16_copy_2
+        properties: {}
+        type: ColumnPanel
+        layout_properties: {grid_position: 'RNGBVH,CFQEBE'}
+        components:
+        - name: column_panel_8_copy_2
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          type: ColumnPanel
+          layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
+          components:
+          - name: spacer_3_copy_2
+            properties: {height: 32, spacing_below: none, spacing_above: none}
+            type: Spacer
+            layout_properties: {grid_position: 'FOIFNO,VHTOSF'}
+          - name: pipe_check
+            properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+              foreground: '', allow_indeterminate: false, visible: true, text: '',
+              font_size: null, font: '', spacing_above: none, spacing_below: none,
+              italic: false, background: '', bold: false, checked: true, underline: false}
+            type: CheckBox
+            layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
+            event_bindings: {change: pipe_check_change}
+          - name: label_5_copy_2
+            properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+              visible: true, text: 2 7/8" PIPE, font_size: null, font: '', spacing_above: small,
+              icon_align: left, spacing_below: small, italic: false, background: '',
+              bold: true, underline: false, icon: ''}
+            type: Label
+            layout_properties: {grid_position: 'FOIFNO,GUFLHW'}
+        - name: pipe_amount
+          properties: {role: outlined, spacing_above: none, spacing_below: none}
+          type: TextBox
+          layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
+          event_bindings: {lost_focus: pipe_amount_lost_focus, change: pipe_amount_change,
+            pressed_enter: pipe_amount_pressed_enter}
     - name: add_button
       properties: {text: Add Item(s), role: outlined-button}
       type: Button

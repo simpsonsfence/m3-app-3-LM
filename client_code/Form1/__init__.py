@@ -15,9 +15,10 @@ class Form1(Form1Template):
   """Initiating variables globally so they can be accesed from multiple functions"""
   item_number = ""
   item_description = ""
+  list_price = ""
   cost_after = ""
   freight = ""
-  fin_cost = ""
+  misc = ""
   total_cost = ""
   markup = ""
   unit_price = ""
@@ -37,7 +38,7 @@ class Form1(Form1Template):
     self.init_components(**properties)
     
     """Set the variable to look up items in the spreadsheet"""
-    self.full_list = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
+    self.full_list = [(row["Part Number"], row) for row in app_files.liftmaster_all_items["Sheet1"].rows]
     self.part_look_up.items = self.full_list
     self.invoice_number_item = self.part_look_up.selected_value
     
@@ -61,52 +62,62 @@ class Form1(Form1Template):
 
     """Reset check boxes to checked whenever product is changed"""
     self.freight_check.checked = True
-    self.fin_cost_check.checked = True
+    self.misc_check.checked = True
     self.markup_check.checked = True
 
     """Getting the product info from the spreadsheet"""
     part_selected = self.part_look_up.selected_value
     self.item_number = part_selected['Part Number']
     self.item_description = part_selected['Description']
-    list_price = part_selected['Price']
-    exchange = part_selected['Exchange']
-    self.cost_after = part_selected['COST WITH']
-    self.freight = part_selected['FREIGHT']
-    self.fin_cost = part_selected['Fin Cost']
-    self.total_cost = part_selected['TOTAL']
-    self.markup = part_selected['MARK-UP']
+    self.list_price = part_selected['List Price']
     self.item_amount.text = 1
-    self.unit_price = part_selected['SELLING PRICE']
     self.markup_percentage.text = 60
 
     """Set the amounts into the displayed text to veiw"""
     self.item_description_text.text = self.item_description
-    self.list_price_box.text = list_price
-    self.exchange_box.text = exchange
-    self.freight_box.text = self.freight
-    self.fin_cost_box.text = self.fin_cost
-    self.total_cost_box.text = self.total_cost
-    self.markup_box.text = self.markup
-    self.unit_price_box.text = self.unit_price
-    self.extended_price_box.text = self.unit_price
+    self.list_price_box.text = self.list_price
+    self.misc_amount.text = 100
+    self.freight_amount.text = 200
+    self.weld_charge_amount.text = 45
+    self.prep_cost_amount.text = 65
+    self.pipe_amount.text = 6.95
+    self.total_cost_box.text = "$ " + '{:,.2f}'.format(float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)
+    self.markup_box.text = "$ " + '{:,.2f}'.format((float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)*0.6)
+    self.unit_price_box.text = "$ " + '{:,.2f}'.format(float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95 + ((float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)*0.6))
+    self.extended_price_box.text = self.unit_price_box.text
     
     """Get extended price as a float for adding to total"""
-    self.extended_price = float(self.unit_price.lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.extended_price = float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95 + (float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)*0.6
 
   def set_selling(self):
     """Float variables to total up costs"""
-    total_cost_float = float(self.cost_after.lstrip('$ ').rstrip(' ').replace(",", ""))
-    unit_price_float = float(self.cost_after.lstrip('$ ').rstrip(' ').replace(",", ""))
+    total_cost_float = float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", ""))
+    unit_price_float = float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", ""))
 
     """If freight is checked add it to the totals"""
     if self.freight_check.checked:
-      unit_price_float += float(self.freight.lstrip('$ ').rstrip(' ').replace(",", ""))
-      total_cost_float += float(self.freight.lstrip('$ ').rstrip(' ').replace(",", ""))
+      unit_price_float += float(self.freight_amount.text)
+      total_cost_float += float(self.freight_amount.text)
 
-    """If fin cost is checked add it to the totals"""
-    if self.fin_cost_check.checked:
-      unit_price_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
-      total_cost_float += float(self.fin_cost.lstrip('$ ').rstrip(' ').replace(",", ""))
+    """If misc is checked add it to the totals"""
+    if self.misc_check.checked:
+      unit_price_float += float(self.misc_amount.text)
+      total_cost_float += float(self.misc_amount.text)
+
+    """If weld charge is checked add it to the totals"""
+    if self.weld_charge_check.checked:
+      unit_price_float += float(self.weld_charge_amount.text)
+      total_cost_float += float(self.weld_charge_amount.text)
+
+    """If prep cost is checked add it to the totals"""
+    if self.prep_cost_check.checked:
+      unit_price_float += float(self.prep_cost_amount.text)
+      total_cost_float += float(self.prep_cost_amount.text)
+
+    """If pipe is checked add it to the totals"""
+    if self.pipe_check.checked:
+      unit_price_float += float(self.pipe_amount.text)
+      total_cost_float += float(self.pipe_amount.text)
 
     """Setting the total cost to display"""
     """:, means put , in tousands .2f means show two decimal places"""
@@ -141,7 +152,7 @@ class Form1(Form1Template):
     self.set_selling()
     pass
 
-  def fin_cost_check_change(self, **event_args):
+  def misc_check_copy3_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     self.set_selling()
 
@@ -226,7 +237,7 @@ class Form1(Form1Template):
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.invoice_number_item['Invoice Number'])+1)
     
     """Re-set the list items to set the invoice number to freshly updated one"""
-    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
+    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.liftmaster_all_items["Sheet1"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
     
     """Set the date and number text again"""
@@ -349,7 +360,102 @@ class Form1(Form1Template):
     self.invoice_number_item['Invoice Number'] = '' + str(int(self.new_invoice_number.text))
     
     """Repull the new number from the sheet"""
-    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.dd_pricing["Sheet1"].rows]
+    self.part_look_up.items = [(row["Part Number"], row) for row in app_files.liftmaster_all_items["Sheet1"].rows]
     self.invoice_number_item = self.part_look_up.selected_value
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
+    pass
+
+  def misc_check_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.set_selling()
+    pass
+
+  def misc_amount_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
+    pass
+
+  def freight_amount_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
+    pass
+
+  def freight_amount_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.set_selling()
+    pass
+
+  def freight_amount_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.set_selling()
+    pass
+
+  def misc_amount_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.set_selling()
+    pass
+
+  def misc_amount_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.set_selling()
+    pass
+
+  def weld_charge_check_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.set_selling()
+    pass
+
+  def weld_charge_amount_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
+    pass
+
+  def weld_charge_amount_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.set_selling()
+    pass
+
+  def weld_charge_amount_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.set_selling()
+    pass
+
+  def prep_cost_check_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.set_selling()
+    pass
+
+  def prep_cost_amount_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
+    pass
+
+  def prep_cost_amount_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.set_selling()
+    pass
+
+  def prep_cost_amount_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.set_selling()
+    pass
+
+  def pipe_check_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    self.set_selling()
+    pass
+
+  def pipe_amount_lost_focus(self, **event_args):
+    """This method is called when the TextBox loses focus"""
+    self.set_selling()
+    pass
+
+  def pipe_amount_change(self, **event_args):
+    """This method is called when the text in this text box is edited"""
+    self.set_selling()
+    pass
+
+  def pipe_amount_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    self.set_selling()
     pass
