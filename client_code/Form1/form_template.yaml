@@ -28,8 +28,8 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'QNFDUR,PLJJWC'}
-      event_bindings: {pressed_enter: search_box_pressed_enter, change: search_box_change,
-        lost_focus: search_box_lost_focus}
+      event_bindings: {pressed_enter: call_search_list, change: call_search_list,
+        lost_focus: call_search_list}
     - type: DropDown
       properties:
         role: null
@@ -123,7 +123,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             name: markup_check
             layout_properties: {grid_position: 'HHWPVS,TIMOIY'}
-            event_bindings: {change: markup_check_change}
+            event_bindings: {change: call_set_selling}
           - type: Label
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Mark Up, font_size: null, font: '', spacing_above: small,
@@ -145,8 +145,8 @@ components:
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'GVEGHU,JKBXQS'}
-            event_bindings: {pressed_enter: markup_percentage_pressed_enter, change: markup_percentage_change,
-              lost_focus: markup_percentage_lost_focus}
+            event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+              lost_focus: call_set_selling}
       - type: Label
         properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
           visible: true, text: Selling Price, font_size: null, font: '', spacing_above: small,
@@ -179,8 +179,8 @@ components:
             properties: {role: outlined, spacing_above: none, spacing_below: none}
             type: TextBox
             layout_properties: {grid_position: 'WRTLTB,JPQWWQ'}
-            event_bindings: {pressed_enter: markup_percentage_pressed_enter, lost_focus: item_amount_lost_focus,
-              change: item_amount_change}
+            event_bindings: {pressed_enter: call_set_selling, lost_focus: call_set_selling,
+              change: call_set_selling}
         - name: label_12
           properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
             visible: true, text: Total Price, font_size: null, font: '', spacing_above: small,
@@ -218,7 +218,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             type: CheckBox
             layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-            event_bindings: {change: misc_check_change}
+            event_bindings: {change: call_set_selling}
           - name: label_5_copy_3
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Misc., font_size: null, font: '', spacing_above: small,
@@ -230,8 +230,8 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'FKHFGW,XRZFPS'}
-          event_bindings: {pressed_enter: misc_amount_pressed_enter, change: misc_amount_change,
-            lost_focus: misc_amount_lost_focus}
+          event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+            lost_focus: call_set_selling}
       - name: column_panel_19
         properties: {}
         type: ColumnPanel
@@ -254,7 +254,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             name: freight_check
             layout_properties: {grid_position: 'BZKDQC,CMGTSI'}
-            event_bindings: {change: freight_check_change}
+            event_bindings: {change: call_set_selling}
           - type: Label
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Freight, font_size: null, font: '', spacing_above: small,
@@ -266,8 +266,8 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'CFKUGJ,DLUXMN'}
-          event_bindings: {pressed_enter: freight_amount_pressed_enter, change: freight_amount_change,
-            lost_focus: freight_amount_lost_focus}
+          event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+            lost_focus: call_set_selling}
       - name: column_panel_16
         properties: {}
         type: ColumnPanel
@@ -289,7 +289,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             name: weld_charge_check
             layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-            event_bindings: {change: weld_charge_check_change}
+            event_bindings: {change: call_set_selling}
           - type: Label
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Weld Charge, font_size: null, font: '', spacing_above: small,
@@ -301,8 +301,8 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-          event_bindings: {pressed_enter: weld_charge_amount_pressed_enter, change: weld_charge_amount_change,
-            lost_focus: weld_charge_amount_lost_focus}
+          event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+            lost_focus: call_set_selling}
       - name: column_panel_16_copy
         properties: {}
         type: ColumnPanel
@@ -324,7 +324,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             type: CheckBox
             layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-            event_bindings: {change: prep_cost_check_change}
+            event_bindings: {change: call_set_selling}
           - name: label_5_copy
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: Prep Cost, font_size: null, font: '', spacing_above: small,
@@ -336,8 +336,8 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-          event_bindings: {pressed_enter: prep_cost_amount_pressed_enter, change: prep_cost_amount_change,
-            lost_focus: prep_cost_amount_lost_focus}
+          event_bindings: {pressed_enter: call_set_selling, change: call_set_selling,
+            lost_focus: call_set_selling}
       - name: column_panel_16_copy_2
         properties: {}
         type: ColumnPanel
@@ -359,7 +359,7 @@ components:
               italic: false, background: '', bold: false, checked: true, underline: false}
             type: CheckBox
             layout_properties: {grid_position: 'FOIFNO,TBVPYT'}
-            event_bindings: {change: pipe_check_change}
+            event_bindings: {change: call_set_selling}
           - name: label_5_copy_2
             properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
               visible: true, text: 2 7/8" PIPE, font_size: null, font: '', spacing_above: small,
@@ -371,8 +371,8 @@ components:
           properties: {role: outlined, spacing_above: none, spacing_below: none}
           type: TextBox
           layout_properties: {grid_position: 'TKKSCF,UPUZSQ'}
-          event_bindings: {lost_focus: pipe_amount_lost_focus, change: pipe_amount_change,
-            pressed_enter: pipe_amount_pressed_enter}
+          event_bindings: {lost_focus: call_set_selling, change: call_set_selling,
+            pressed_enter: call_set_selling}
     - name: add_button
       properties: {text: Add Item(s), role: outlined-button}
       type: Button

@@ -145,51 +145,6 @@ class Form1(Form1Template):
     self.extended_price = "$ " + '{:,.2f}'.format(self.extended_price_float)
     self.extended_price_box.text = self.extended_price
     pass
-      
-  def freight_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    """Run the function to recalculate the selling price"""
-    self.set_selling()
-    pass
-
-  def misc_check_copy3_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-
-  def markup_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-    
-  def item_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_change(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-    
-  def item_amount_change(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def markup_percentage_lost_focus(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-    
-  def item_amount_lost_focus(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
   
   def add_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -278,20 +233,10 @@ class Form1(Form1Template):
     
     pass
   
-  def search_box_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+  def call_search_list(self, **event_args):
     self.search_list()
     pass
 
-  def search_box_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.search_list()
-    pass
-
-  def search_box_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.search_list()
-    pass
 
   def remove_button_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -365,97 +310,6 @@ class Form1(Form1Template):
     self.rich_text_2.content = 'DATE ' + date.today().strftime("%B %d, %Y") + '\n' + 'NUMBER ' + self.invoice_number_item['Invoice Number']
     pass
 
-  def misc_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def misc_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def freight_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def freight_amount_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.set_selling()
-    pass
-
-  def freight_amount_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.set_selling()
-    pass
-
-  def misc_amount_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.set_selling()
-    pass
-
-  def misc_amount_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.set_selling()
-    pass
-
-  def weld_charge_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def weld_charge_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def weld_charge_amount_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.set_selling()
-    pass
-
-  def weld_charge_amount_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.set_selling()
-    pass
-
-  def prep_cost_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def prep_cost_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    self.set_selling()
-    pass
-
-  def prep_cost_amount_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.set_selling()
-    pass
-
-  def prep_cost_amount_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.set_selling()
-    pass
-
-  def pipe_check_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    self.set_selling()
-    pass
-
-  def pipe_amount_lost_focus(self, **event_args):
-    """This method is called when the TextBox loses focus"""
-    self.set_selling()
-    pass
-
-  def pipe_amount_change(self, **event_args):
-    """This method is called when the text in this text box is edited"""
-    self.set_selling()
-    pass
-
-  def pipe_amount_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+  def call_set_selling(self, **event_args):
     self.set_selling()
     pass
