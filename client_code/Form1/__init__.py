@@ -22,7 +22,6 @@ class Form1(Form1Template):
   markup = ""
   unit_price = ""
   extended_price = ""
-  hst = ""
   extended_price_float = 0
   net_amount_float = 0
   hst_float = 0
