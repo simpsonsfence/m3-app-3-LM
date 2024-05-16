@@ -184,7 +184,7 @@ class Form1(Form1Template):
     """Remove the lookup and calclating section from the page"""
     self.form_panel.visible = False
     
-    """Print the page"""
+    """Print the page using javascript that is in the html file"""
     self.call_js('printPage')
     
     """Set the lookup section back to visible"""
