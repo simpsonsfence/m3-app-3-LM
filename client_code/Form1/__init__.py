@@ -16,16 +16,13 @@ class Form1(Form1Template):
   item_number = ""
   item_description = ""
   list_price = ""
-  cost_after = ""
   freight = ""
   misc = ""
   total_cost = ""
   markup = ""
   unit_price = ""
   extended_price = ""
-  net_amount = ""
   hst = ""
-  total_due = ""
   extended_price_float = 0
   net_amount_float = 0
   hst_float = 0
@@ -36,6 +33,9 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    """Tool tip to make the search stand out"""
+    self.search_box.tooltip = "Enter the item/part number you want to look up."
     
     """Set the variable to look up items in the spreadsheet"""
     self.full_list = [(row["Part Number"], row) for row in app_files.liftmaster_all_items["Sheet1"].rows]
@@ -70,6 +70,8 @@ class Form1(Form1Template):
     self.item_number = part_selected['Part Number']
     self.item_description = part_selected['Description']
     self.list_price = part_selected['List Price']
+    
+    """Setting item amount and markup percentage to go to defaults"""
     self.item_amount.text = 1
     self.markup_percentage.text = 60
 
@@ -81,9 +83,10 @@ class Form1(Form1Template):
     self.weld_charge_amount.text = 45
     self.prep_cost_amount.text = 65
     self.pipe_amount.text = 6.95
-    self.total_cost_box.text = "$ " + '{:,.2f}'.format(float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)
-    self.markup_box.text = "$ " + '{:,.2f}'.format((float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)*0.6)
-    self.unit_price_box.text = "$ " + '{:,.2f}'.format(float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95 + ((float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", "")) + 416.95)*0.6))
+    list_price_float = float(self.list_price.lstrip('$ ').rstrip(' ').replace(",", ""))
+    self.total_cost_box.text = "$ " + '{:,.2f}'.format(list_price_float + 416.95)
+    self.markup_box.text = "$ " + '{:,.2f}'.format((list_price_float + 416.95)*0.6)
+    self.unit_price_box.text = "$ " + '{:,.2f}'.format(list_price_float + 416.95 + ((list_price_float + 416.95)*0.6))
     self.extended_price_box.text = self.unit_price_box.text
     
     """Get extended price as a float for adding to total"""
