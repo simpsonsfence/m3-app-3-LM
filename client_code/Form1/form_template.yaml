@@ -12,7 +12,7 @@ components:
   components:
   - type: ColumnPanel
     properties: {role: border-bottom, tooltip: '', border: '', foreground: '', visible: true,
-      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":15,"NWRSJK":20,"YURRIM":20,"XASDJO":25}',
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{"BJVXDZ":20,"LSXARU":45,"QWVSOI":10,"DPDBBC":32,"OEWVIA":15,"AFPPEX":45,"PLJJWC":15,"PEUTTR":20,"NWRSJK":20,"YURRIM":20,"XASDJO":20}',
       spacing_below: none, background: ''}
     name: form_panel
     layout_properties: {grid_position: 'GJURRN,DZBALF'}
@@ -203,7 +203,7 @@ components:
         layout_properties: {grid_position: 'MBLMKI,PKZHEW'}
         components:
         - name: column_panel_8_copy_3
-          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":37,"TBVPYT":8,"GUFLHW":15}'}
           type: ColumnPanel
           layout_properties: {grid_position: 'FKHFGW,XKKYZB'}
           components:
@@ -274,7 +274,7 @@ components:
         layout_properties: {grid_position: 'OMRRMY,WYLMVM'}
         components:
         - name: column_panel_8
-          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":27,"TBVPYT":8,"GUFLHW":25}'}
           type: ColumnPanel
           layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
           components:
@@ -309,7 +309,7 @@ components:
         layout_properties: {grid_position: 'GEXNXT,CRPHFT'}
         components:
         - name: column_panel_8_copy
-          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":32,"TBVPYT":8,"GUFLHW":20}'}
           type: ColumnPanel
           layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
           components:
@@ -344,7 +344,7 @@ components:
         layout_properties: {grid_position: 'RNGBVH,CFQEBE'}
         components:
         - name: column_panel_8_copy_2
-          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":22,"TBVPYT":8,"GUFLHW":30}'}
+          properties: {spacing_above: none, spacing_below: none, col_widths: '{"VHTOSF":27,"TBVPYT":8,"GUFLHW":25}'}
           type: ColumnPanel
           layout_properties: {grid_position: 'TKKSCF,KMTMUD'}
           components:
