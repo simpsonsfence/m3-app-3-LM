@@ -179,6 +179,7 @@ services:
       thumbnailLink: https://lh3.googleusercontent.com/drive-storage/AJQWtBOnDRCn7cD-noudQC2BXFJdT_k3M_LO_bpy7k1MPDyO1V9vOaLfW_36j3uN9yUgkAXEMMXvLp0y4yF9FMVbY3LhrFrK8GWT6Ie75Z3H6f5CQxbSjYa1NkDV4ja5UQ=s220
       ownerNames: [Todd Sales]
   server_config: {enc_delegation_refresh_token: +/zHGHFhRC0lUrVgT31N5j8J8BiTFkRRKvzvqYJ2vkYGQxeWT2V1Gr/QdCcmu0TpJKiu/OBqEVw1Ct7Nw6SAFToMA5rqZ2Wu6wFhFTT5JirFbYkEeE3leJNXpx4L138DwMZo9r0E//diuwytguh8MzQekyjpAqIl4WxeNiqtSK6M9eaMLMI3HsXjk5rJwwNSgAOQGiiuYPst/ZFRabspivVmeA2tjhCTOdEM7VqN8+5YkfV8p+c1ehQsyclzIV7nc01PzFPknT5hXRvCFRKjNYT5inYzKSrs/TnlhZyfBzC+ZiisHG286EjcOwgNKw==}
+startup: {type: form, module: Form2}
 package_name: M3_App_3
 allow_embedding: true
 name: Liftmaster Quote Creator
@@ -186,7 +187,7 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
   server_spec: null}
 metadata: {title: Liftmaster Quote Creator, description: Creates quotes from the excel list of liftmaster products and their pricing.,
   logo_img: 'asset:android-chrome-192x192.png'}
-startup_form: Form1
+startup_form: null
 db_schema:
   users:
     client: none

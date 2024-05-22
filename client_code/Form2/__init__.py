@@ -1,4 +1,4 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import Form2Template
 from anvil import *
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -10,8 +10,7 @@ from anvil.google.drive import app_files
 from datetime import date
 import time
 
-class Form1(Form1Template):
-
+class Form2(Form2Template):
   """Initiating variables globally so they can be accesed from multiple functions"""
   item_number = ""
   item_description = ""

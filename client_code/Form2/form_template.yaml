@@ -518,7 +518,7 @@ components:
       components:
       - name: repeating_panel_2
         properties:
-          item_template: Form1.RowTemplate2
+          item_template: Form2.RowTemplate2
           role: [border, smaller-text]
           spacing_above: none
           spacing_below: none
@@ -538,7 +538,7 @@ components:
         components:
         - name: repeating_panel_3
           properties:
-            item_template: Form1.RowTemplate3
+            item_template: Form2.RowTemplate3
             role: [border, smaller-text]
             spacing_above: none
             spacing_below: none
@@ -568,7 +568,7 @@ components:
           components:
           - name: repeating_panel_1
             properties:
-              item_template: Form1.RowTemplate1
+              item_template: Form2.RowTemplate1
               spacing_above: none
               spacing_below: none
               role: [set-height, smaller-text, small-text-constant]
